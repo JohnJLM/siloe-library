@@ -1,0 +1,96 @@
+.titleAddBook {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 2em !important;
+    font-weight: 400 !important;
+    margin-bottom: 1em !important;
+}
+
+.contentLoginDialog {
+    width: 100% ;
+    height: 100% ;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    padding-top: 2em ;
+    padding-left: 2em ;
+    padding-right: 2em ;
+    
+}
+.componentLoginDialog {
+    width: 30vw;
+    height: 225px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 2em;
+}
+.componentLoginDialogMobile {
+    width: 100%;
+    height: 225px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 2em;
+}
+.inputsLoginAdmin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+        height: 100%;
+        width: 70%;
+        flex-wrap: wrap;
+    }
+.inputDescription {
+    width: 25%;
+}
+
+
+.imgPreviewAddBook{
+    width: 225px !important;
+        height: 350px !important;
+    margin-right: 10px;
+    
+    img{
+        width: 225px !important;
+        height: 350px !important;
+        border-radius: 15px;
+    }
+}
+.loaderAddBook {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+        gap: 1em;
+        font-size: 2em;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(207, 211, 219, 0.726) !important;
+    z-index: 10;
+}
+
+.loaderAddBookText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.stepTwoContainer {
+    width: 35vw;
+    height: 150px;
+}
+
+.textStepTwo {
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

@@ -1,0 +1,15 @@
+.loadingGlobal {
+    z-index: 1000;
+    width: 100%;
+    position: fixed;
+}
+
+.darkLayerGlobal{
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #6868687e;
+    position: fixed;
+    z-index:500;
+}

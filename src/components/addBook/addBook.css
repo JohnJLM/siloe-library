@@ -1,0 +1,136 @@
+.titleAddBook {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 2em !important;
+    font-weight: 400 !important;
+    margin-bottom: 1em !important;
+}
+
+.contentAddBook {
+    width: 100% ;
+    height: 100% ;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    padding-top: 2em ;
+    padding-left: 2em ;
+    padding-right: 2em ;
+    
+}
+.componentAddBook {
+    width: 75vw;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+    
+.inputsAddBook {
+    display: flex;
+    flex-direction: column;
+        gap: 1em;
+    width: 30%;
+        flex-wrap: wrap;
+    }
+.inputDescription {
+    width: 25%;
+}
+
+
+.imgPreviewAddBook{
+    width: 225px !important;
+        height: 350px !important;
+    margin-right: 10px;
+    
+    img{
+        width: 225px !important;
+            height: 350px !important;
+        border-radius: 15px;
+    }
+}
+.loaderAddBook {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+        gap: 1em;
+        font-size: 2em;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(207, 211, 219, 0.726) !important;
+    z-index: 10;
+}
+
+.loaderAddBookText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.stepTwoContainer {
+    width: 35vw;
+    height: 150px;
+}
+
+.textStepTwo {
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+@media (max-width: 1024px) {
+    .componentAddBook {
+        width: 100% !important;
+        height: auto;
+        overflow-x: auto;
+        display: flex;
+        flex-direction: column !important;
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .inputsAddBook {
+        width: 100% !important;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        flex: 1;
+        height: auto;
+        gap: 25px !important;
+
+    }
+
+    .inputDescription {
+        margin-top: 25px !important;
+        flex: 1;
+        width: 100% !important;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        height: auto;
+    }
+
+    .imgPreviewAddBook {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        flex: 1;
+    }
+
+    .buttonImg {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        flex: 1;
+        width: 100% !important;
+        height: auto;
+    }
+}
