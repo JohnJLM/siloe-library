@@ -5,7 +5,7 @@ import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import { dotSpinner } from 'ldrs';
 import LunchDiningIcon from '@mui/icons-material/LunchDining';
-import { authenticateUser } from '../../firebase/fb';
+import { signIn } from '../../firebase/fb';
 import { useDispatch } from 'react-redux';
 import { AuthReset, AuthValidationFail, AuthValidationSuccess } from '../../store/slices/auth.store';
 import { useAppSelector } from '../../hooks/redux-hooks';
@@ -39,10 +39,12 @@ export default function LoginDialog({ show, closeDialog }: LoginDialogProps) {
       setLoading(true);
       try {
          // Verificar el usuario en BBDD
-         const auth = await authenticateUser(user.user, user.password);
+         // const auth = await authenticateUser(user.user, user.password);
+         const auth = await signIn({ email: user.user, password: user.password });
          if (auth) {
             closeDialog();
-            dispatch(AuthValidationSuccess(auth));
+            console.log(auth);
+            dispatch(AuthValidationSuccess('Siloe Admin'));
          } else dispatch(AuthValidationFail());
       } catch (error) {
          console.error('Error al autenticar usuario:', error);

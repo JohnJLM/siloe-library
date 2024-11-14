@@ -21,7 +21,7 @@
       "bcryptjs": "^2.4.3",
       "breakpoint-sass": "^3.0.0",
       "classnames": "^2.5.1",
-      "firebase": "^10.7.2",
+      "firebase": "^10.12.4",
       "ldrs": "^1.0.1",
       "lodash": "^4.17.21",
       "react": "^18.2.0",

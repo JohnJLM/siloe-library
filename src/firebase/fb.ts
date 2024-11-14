@@ -7,6 +7,7 @@ import { addDoc, collection, doc, getDoc, getDocs, getFirestore, updateDoc } fro
 // import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { get } from 'lodash';
 import { comparePassword } from '../utils/hashPassword.util';
+import { signInWithEmailAndPassword, initializeAuth } from 'firebase/auth';
 
 export const app = firebase.initializeApp({
    projectId: import.meta.env.VITE_PROJECT_ID,
@@ -21,6 +22,7 @@ export const app = firebase.initializeApp({
 
 export const storage = getStorage(app);
 export const db = getFirestore(app);
+const auth = initializeAuth(app);
 
 /**
  * udploadFile Subir archivo a la BBDD Firebase
@@ -114,3 +116,16 @@ export async function authenticateUser(username: string, password: string) {
       return false; // Error occurred during authentication
    }
 }
+
+export const signIn = async ({ email, password }) => {
+   try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user.toJSON();
+      return user;
+   } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log('Error :', error, { errorCode, errorMessage });
+      return false;
+   }
+};

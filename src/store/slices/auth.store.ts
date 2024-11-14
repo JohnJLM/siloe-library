@@ -28,7 +28,7 @@ export const authStore = createSlice({
          state.loading = false;
          state.error = true;
       },
-      AuthValidationSuccess: (state, action: PayloadAction) => {
+      AuthValidationSuccess: (state, action: PayloadAction<string>) => {
          state.loading = false;
          state.error = false;
          state.admin = true;
